@@ -11,17 +11,17 @@ const Contact = () => {
                 <h3 className='text-primary text-3xl font-bold'>Contact Us</h3>
                 <h1 className='text-white text-4xl font-bold'>Stay connected with us</h1>
                 <div className="my-5">
-                    <div class="form-control w-1/2 m-auto">
-                        <label class="">
-                            <input type="text" placeholder="Email Address" class="input input-bordered w-3/4 my-3" />
+                    <div className="form-control w-1/2 m-auto">
+                        <label className="">
+                            <input type="text" placeholder="Email Address" className="input input-bordered w-3/4 my-3" />
                         </label>
 
-                        <label class="">
-                            <input type="text" placeholder="Subject" class="input input-bordered w-3/4 my-3" />
+                        <label className="">
+                            <input type="text" placeholder="Subject" className="input input-bordered w-3/4 my-3" />
                         </label>
 
-                        <label class="">
-                            <textarea type="text" placeholder="Your message" class="input input-bordered w-3/4 my-3" />
+                        <label className="">
+                            <textarea type="text" placeholder="Your message" className="input input-bordered w-3/4 my-3" />
                         </label>
                     </div>
 
