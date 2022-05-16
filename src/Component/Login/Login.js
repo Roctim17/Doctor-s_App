@@ -5,6 +5,7 @@ import auth from '../../firebase.init';
 import Loading from "../Home/Shared/Loading";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useToken from '../../Hooks/useToken';
+import { toast } from 'react-toastify';
 const Login = () => {
     const [email, setEmail] = useState({ value: '', error: '' });
     const [sendPasswordResetEmail, sending, forgotError] = useSendPasswordResetEmail(
@@ -48,20 +49,29 @@ const Login = () => {
 
     const SendPasswordReset = () => {
         const email = getValues('email')
+        // sendPasswordResetEmail(email)
         sendPasswordResetEmail(email)
 
     }
-    if (forgotError === (email === '')) {
-        setEmail({ value: '', error: 'Email is required' })
-        return (
-            <div>
-                <p>Error: {forgotError.message}</p>
-            </div>
-        );
+    if (forgotError) {
+        toast.error(forgotError.message)
     }
+    // if (forgotError === (email === '')) {
+    //     setEmail({ value: '', error: 'Email is required' })
+    //     return (
+    //         <div>
+    //             <p>Error: {forgotError.message}</p>
+    //         </div>
+    //     );
+    // }
 
-    if (sending) {
-        return <p>Sending...</p>;
+    else if (sending) {
+        toast.success('send link')
+        //     return (
+        //         <div>
+        //             <p>Sending ..... </p>
+        //         </div>
+        //     );
     }
 
 
