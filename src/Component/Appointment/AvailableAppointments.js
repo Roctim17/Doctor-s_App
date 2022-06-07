@@ -10,17 +10,15 @@ const AvailableAppointments = ({ date }) => {
     const [treatment, setTreatment] = useState(null);
     const formattedDate = format(date, 'PP')
 
-    const { data: services, isLoading, refetch } = useQuery(['available', formattedDate], () =>
-        fetch(`https://boiling-bastion-15461.herokuapp.com/available?date=${formattedDate}`)
-            .then(res => res.json())
-    )
+    const { data: services, isLoading, refetch } = useQuery(['available', formattedDate], () => fetch(`https://secret-dusk-46242.herokuapp.com/available?date=${formattedDate}`)
+        .then(res => res.json()))
 
     if (isLoading) {
         return <Loading></Loading>
     }
 
     // useEffect(() => {
-    //     fetch(`https://boiling-bastion-15461.herokuapp.com/available?date=${formattedDate}`)
+    //     fetch(`https://secret-dusk-46242.herokuapp.com/available?date=${formattedDate}`)
     //         .then(res => res.json())
     //         .then(data => setServices(data))
     // }, [formattedDate]);

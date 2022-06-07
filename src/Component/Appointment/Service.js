@@ -2,7 +2,7 @@ import React from 'react';
 // import PrimaryButton from '../Home/Shared/PrimaryButton';
 
 const Service = ({ service, setTreatment }) => {
-    const { name, slots } = service
+    const { name, slots, price } = service
     return (
         <div className="card lg:max-w-lg bg-base-100 shadow-xl">
             <div className="card-body text-center">
@@ -13,6 +13,7 @@ const Service = ({ service, setTreatment }) => {
                         : <span className='text-red-500'> No slot Available</span>
                 }</p>
                 <p>{slots.length} {slots.length > 1 ? 'spaces' : 'space'} Available</p>
+                <p><small>Price : {price}</small><span> ৳</span> </p>
                 <div className="card-actions justify-center">
 
                     <label htmlFor="booking-modal"
