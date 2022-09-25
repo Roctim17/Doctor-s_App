@@ -10,7 +10,7 @@ const AvailableAppointments = ({ date }) => {
     const [treatment, setTreatment] = useState(null);
     const formattedDate = format(date, 'PP')
 
-    const { data: services, isLoading, refetch } = useQuery(['available', formattedDate], () => fetch(`https://secret-dusk-46242.herokuapp.com/available?date=${formattedDate}`)
+    const { data: services, isLoading, refetch } = useQuery(['available', formattedDate], () => fetch(`https://doctor-s-app-server-tmgg.vercel.app/available?date=${formattedDate}`)
         .then(res => res.json()))
 
     if (isLoading) {
@@ -18,7 +18,7 @@ const AvailableAppointments = ({ date }) => {
     }
 
     // useEffect(() => {
-    //     fetch(`https://secret-dusk-46242.herokuapp.com/available?date=${formattedDate}`)
+    //     fetch(`https://doctor-s-app-server-tmgg.vercel.app/available?date=${formattedDate}`)
     //         .then(res => res.json())
     //         .then(data => setServices(data))
     // }, [formattedDate]);

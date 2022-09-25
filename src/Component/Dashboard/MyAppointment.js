@@ -11,7 +11,7 @@ const MyAppointment = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`https://secret-dusk-46242.herokuapp.com/booking?patient=${user.email}`, {
+            fetch(`https://doctor-s-app-server-tmgg.vercel.app/booking?patient=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -30,7 +30,7 @@ const MyAppointment = () => {
                     setAppointments(data)
                 });
         }
-    }, [user])
+    }, [])
     return (
         <div>
             <h1>My Appointments :{appointments.length}</h1>
