@@ -7,7 +7,7 @@ import Loading from '../Home/Shared/Loading';
 const AddDoctor = () => {
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
-    const { data: services, isLoading } = useQuery('services', () => fetch('https://secret-dusk-46242.herokuapp.com/service').then(res => res.json()))
+    const { data: services, isLoading } = useQuery('services', () => fetch('https://morning-wave-60521.herokuapp.com/service').then(res => res.json()))
 
     const imgStorageKey = 'e5c8b001d59d7f3315d948a1ec5993c5';
 
@@ -31,7 +31,7 @@ const AddDoctor = () => {
                         img: img
                     }
                     // send database
-                    fetch('https://secret-dusk-46242.herokuapp.com/doctor', {
+                    fetch('https://morning-wave-60521.herokuapp.com/doctor', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',
