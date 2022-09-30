@@ -11,11 +11,9 @@ const stripePromise = loadStripe('pk_test_51L1dz5BZJhaULcBPUYZqLvE57rCZccpbpHRlj
 
 const Payment = () => {
     const { id } = useParams();
-<<<<<<< HEAD
+
     const url = `https://morning-wave-60521.herokuapp.com/booking/${id}`
-=======
-    const url = `https://doctor-s-app-server-tmgg.vercel.app/booking/${id}`
->>>>>>> be586665424308962cd1fafc2f3e52761ec04eab
+
     const { data: appointment, isLoading } = useQuery(['booking', id], () => fetch(url, {
         method: 'GET',
         headers: {

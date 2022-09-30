@@ -6,11 +6,7 @@ const useToken = user => {
         const email = user?.user?.email;
         const currentUser = { email: email };
         if (email) {
-<<<<<<< HEAD
             fetch(`https://morning-wave-60521.herokuapp.com/user/${email}`, {
-=======
-            fetch(`https://doctor-s-app-server-tmgg.vercel.app/user/${email}`, {
->>>>>>> be586665424308962cd1fafc2f3e52761ec04eab
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

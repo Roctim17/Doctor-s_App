@@ -4,11 +4,7 @@ import Loading from '../Home/Shared/Loading';
 import UserRow from './UserRow';
 
 const Users = () => {
-<<<<<<< HEAD
     const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://morning-wave-60521.herokuapp.com/user', {
-=======
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://doctor-s-app-server-tmgg.vercel.app/user', {
->>>>>>> be586665424308962cd1fafc2f3e52761ec04eab
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
