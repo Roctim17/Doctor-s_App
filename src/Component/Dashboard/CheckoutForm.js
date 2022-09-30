@@ -12,7 +12,11 @@ const CheckoutForm = ({ appointment }) => {
     const { _id, price, patient, patientName } = appointment;
 
     useEffect(() => {
+<<<<<<< HEAD
         fetch('https://morning-wave-60521.herokuapp.com/create-payment-intent', {
+=======
+        fetch('https://doctor-s-app-server-tmgg.vercel.app/create-payment-intent', {
+>>>>>>> be586665424308962cd1fafc2f3e52761ec04eab
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -72,7 +76,11 @@ const CheckoutForm = ({ appointment }) => {
                 appointment: _id,
                 transactionId: paymentIntent.id
             }
+<<<<<<< HEAD
             fetch(`https://morning-wave-60521.herokuapp.com/booking/${_id}`, {
+=======
+            fetch(`https://doctor-s-app-server-tmgg.vercel.app/booking/${_id}`, {
+>>>>>>> be586665424308962cd1fafc2f3e52761ec04eab
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

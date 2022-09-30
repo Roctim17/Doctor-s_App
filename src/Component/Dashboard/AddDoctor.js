@@ -7,7 +7,11 @@ import Loading from '../Home/Shared/Loading';
 const AddDoctor = () => {
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
+<<<<<<< HEAD
     const { data: services, isLoading } = useQuery('services', () => fetch('https://morning-wave-60521.herokuapp.com/service').then(res => res.json()))
+=======
+    const { data: services, isLoading } = useQuery('services', () => fetch('https://doctor-s-app-server-tmgg.vercel.app/service').then(res => res.json()))
+>>>>>>> be586665424308962cd1fafc2f3e52761ec04eab
 
     const imgStorageKey = 'e5c8b001d59d7f3315d948a1ec5993c5';
 
@@ -31,7 +35,11 @@ const AddDoctor = () => {
                         img: img
                     }
                     // send database
+<<<<<<< HEAD
                     fetch('https://morning-wave-60521.herokuapp.com/doctor', {
+=======
+                    fetch('https://doctor-s-app-server-tmgg.vercel.app/doctor', {
+>>>>>>> be586665424308962cd1fafc2f3e52761ec04eab
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

@@ -11,7 +11,11 @@ const MyAppointment = () => {
 
     useEffect(() => {
         if (user) {
+<<<<<<< HEAD
             fetch(`https://morning-wave-60521.herokuapp.com/booking?patient=${user.email}`, {
+=======
+            fetch(`https://doctor-s-app-server-tmgg.vercel.app/booking?patient=${user.email}`, {
+>>>>>>> be586665424308962cd1fafc2f3e52761ec04eab
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
